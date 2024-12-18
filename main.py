@@ -7,20 +7,20 @@ def max_panels(roof_height, roof_width, panel_height, panel_width):
 
         for i in range((roof_height // a) + 1):
             horizontal_count = i * (roof_width // b)
-            actual_length = roof_height - i * a
-            vertical_count = (actual_length // b) * (roof_width // a)
+            actual_height = roof_height - i * a
+            vertical_count = (actual_height // b) * (roof_width // a)
             max_count = max(max_count, horizontal_count + vertical_count)
 
     return max_count
 
-# print("Ejemplos:")
-# print(max_panels(2, 4, 1, 2))  # 4
-# print(max_panels(3, 5, 1, 2))  # 7
-# print(max_panels(1, 10, 2, 2))  # 0
+print("Ejemplos:")
+print(max_panels(2, 4, 1, 2))  # 4
+print(max_panels(3, 5, 1, 2))  # 7
+print(max_panels(1, 10, 2, 2))  # 0
 
-# print("\nEjemplos Propios:")
-# print(max_panels(1, 10, 1, 2))  # 5
-# print(max_panels(1, 10, 2, 1))  # 5
-# print(max_panels(7, 3, 2, 2))  # 3
-# print(max_panels(7, 3, 2, 1))  # 10
-# print(max_panels(6, 4, 1, 3))  # 8
+print("\nEjemplos Propios:")
+print(max_panels(1, 10, 1, 2))  # 5
+print(max_panels(1, 10, 2, 1))  # 5
+print(max_panels(7, 3, 2, 2))  # 3
+print(max_panels(7, 3, 2, 1))  # 10
+print(max_panels(6, 4, 1, 3))  # 8
